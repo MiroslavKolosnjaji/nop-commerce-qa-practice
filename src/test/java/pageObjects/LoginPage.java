@@ -1,12 +1,11 @@
-package com.myproject.nopcommerce.pageObjects;
+package pageObjects;
 
+import lombok.extern.slf4j.Slf4j;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeMethod;
 
 /**
  * @author Miroslav Kološnjaji
@@ -15,9 +14,9 @@ public class LoginPage {
 
     public WebDriver lDriver;
 
-    public LoginPage(WebDriver rdriver){
-        lDriver = rdriver;
-        PageFactory.initElements(rdriver, this);
+    public LoginPage(WebDriver rDriver){
+        lDriver = rDriver;
+        PageFactory.initElements(rDriver, this);
     }
 
     @FindBy(id = "Email")

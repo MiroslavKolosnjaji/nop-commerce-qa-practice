@@ -1,17 +1,22 @@
 package com.myproject.nopcommerce;
+
 import org.testng.annotations.*;
+
 import static org.testng.Assert.*;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+
 import java.time.Duration;
 
 public class MainPageTest {
     private WebDriver driver;
     private MainPage mainPage;
 
-@BeforeMethod    public void setUp() {
+    @BeforeMethod
+    public void setUp() {
         driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
@@ -20,7 +25,8 @@ public class MainPageTest {
         mainPage = new MainPage(driver);
     }
 
-@AfterMethod    public void tearDown() {
+    @AfterMethod
+    public void tearDown() {
         driver.quit();
     }
 
@@ -35,7 +41,8 @@ public class MainPageTest {
         submitButton.click();
 
         WebElement searchPageField = driver.findElement(By.cssSelector("input[data-test='search-input']"));
-assertEquals(searchPageField.getAttribute("value"), "Selenium");    }
+        assertEquals(searchPageField.getAttribute("value"), "Selenium");
+    }
 
     @Test
     public void toolsMenu() {
@@ -52,5 +59,6 @@ assertEquals(searchPageField.getAttribute("value"), "Selenium");    }
 
         WebElement productsList = driver.findElement(By.id("products-page"));
         assertTrue(productsList.isDisplayed());
-assertEquals(driver.getTitle(), "All Developer Tools and Products by JetBrains");    }
+        assertEquals(driver.getTitle(), "All Developer Tools and Products by JetBrains");
+    }
 }
