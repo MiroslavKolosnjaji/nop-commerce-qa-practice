@@ -1,6 +1,5 @@
-package pageObjects;
+package com.myproject.nopcommerce.pageObjects;
 
-import lombok.extern.slf4j.Slf4j;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.CacheLookup;
@@ -23,7 +22,7 @@ public class LoginPage {
     @CacheLookup
     WebElement txtEmail;
 
-    @FindBy(id = "password")
+    @FindBy(id = "Password")
     @CacheLookup
     WebElement txtPassword;
 

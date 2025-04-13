@@ -1,11 +1,11 @@
-package stepDefinitions;
+package com.myproject.nopcommerce.stepDefinitions;
 
 import io.cucumber.java.en.*;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import lombok.extern.slf4j.Slf4j;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import pageObjects.LoginPage;
+import com.myproject.nopcommerce.pageObjects.LoginPage;
 
 
 import static org.testng.AssertJUnit.assertEquals;

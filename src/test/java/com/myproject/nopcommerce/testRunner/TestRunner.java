@@ -1,4 +1,4 @@
-package testRunner;
+package com.myproject.nopcommerce.testRunner;
 
 import io.cucumber.testng.AbstractTestNGCucumberTests;
 import io.cucumber.testng.CucumberOptions;
@@ -8,8 +8,8 @@ import io.cucumber.testng.CucumberOptions;
  */
 @CucumberOptions(
         features = ".//Features/Login.feature",
-        glue = "stepDefinitions",
-        dryRun = true,
+        glue = "com/myproject/nopcommerce/stepDefinitions",
+        dryRun = false,
         monochrome = true,
         plugin = {"pretty", "html:test-output"}
 )
