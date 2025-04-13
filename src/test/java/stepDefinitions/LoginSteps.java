@@ -14,7 +14,7 @@ import static org.testng.AssertJUnit.assertEquals;
  * @author Miroslav Kološnjaji
  */
 @Slf4j
-public class Steps {
+public class LoginSteps {
 
     private WebDriver driver;
     private LoginPage loginPage;
@@ -24,7 +24,6 @@ public class Steps {
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
         driver.manage().window().maximize();
-//        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 
         loginPage = new LoginPage(driver);
     }
