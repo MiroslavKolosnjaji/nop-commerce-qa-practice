@@ -20,7 +20,7 @@ public class LoginSteps {
     private LoginPage loginPage;
 
     @Given("User Launch Chrome browser")
-    public void user_Launch_Chrome_browser(){
+    public void userLaunchChromeBrowser(){
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
         driver.manage().window().maximize();
@@ -29,7 +29,7 @@ public class LoginSteps {
     }
 
     @When("User opens URL {string}")
-    public void user_opens_URL(String url){
+    public void userOpensURL(String url){
         driver.get(url);
     }
 
@@ -43,7 +43,7 @@ public class LoginSteps {
     }
 
     @When("Click on Login")
-    public void click_on_login() throws InterruptedException {
+    public void clickOnLogin() throws InterruptedException {
         loginPage.clickLogin();
         Thread.sleep(3000);
     }
@@ -59,7 +59,7 @@ public class LoginSteps {
     }
 
     @When("User click on Log out link")
-    public void user_click_on_log_out_link() throws InterruptedException {
+    public void userClickOnLogOutLink() throws InterruptedException {
         loginPage.clickLogout();
         Thread.sleep(3000);
     }
